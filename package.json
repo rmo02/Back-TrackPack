@@ -2,11 +2,14 @@
   "name": "api-correios",
   "version": "1.0.0",
   "description": "api-rastreio",
-  "main": "index.js",
+  "main": "server.js",
+  "type": "module",
   "engines": {
     "node": "18"
   },
   "scripts": {
+    "start": "node .",
+    "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
