@@ -8,6 +8,7 @@ const router = express.Router();
 router.get('/', async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   const { codigos } = req.query;
+  console.log('códigos',codigos);
   if (!codigos) {
     return res.status(400).json({ message: 'Códigos de encomenda não informados' });
   }
