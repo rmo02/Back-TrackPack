@@ -14,8 +14,10 @@ router.get('/', async (req, res) => {
   }
   try {
     const eventos = await rastrearEncomendas(codigos.split(','));
+    console.log('eventos', eventos)
     res.json(eventos);
   } catch (error) {
+    console.log(error);
     res.status(400).json({ message: error.message });
   }
 });
